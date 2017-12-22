@@ -1,21 +1,21 @@
 cmake_minimum_required(VERSION 3.0.0)
-project(my VERSION 1.0.0)
+project(my)
 
 set(myinc /usr/local/include/opencv)
 set(mylibs /usr/local/lib)
 
 ##-I
-include_directories(. ${myinc} ) 
+include_directories(. ${myinc}) 
 
 ##-L
-link_directories(. ${mylibs} )
+link_directories(. ${mylibs})
 
 ##exe
-add_executable(my main.cpp)
+add_executable(${PROJECT_NAME} main.cpp)
 
 ##library
-#add_library(xxx  SHARED|STATIC )
+#add_library(${PROJECT_NAME}  SHARED|STATIC)
 
 ##-l  do not need "-l"
-target_link_libraries(my opencv_core opencv_highgui opencv_imgproc opencv_videoio )
+target_link_libraries(${PROJECT_NAME} opencv_core opencv_highgui opencv_imgproc opencv_videoio )
 
