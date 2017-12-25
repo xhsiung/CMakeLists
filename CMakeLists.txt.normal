@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(my)
-    
+
+set(CMAKE_CXX_FLAGS "-std=c++11")        
 set(myinc /usr/local/include/opencv)
 set(mylibs /usr/local/lib)
 
